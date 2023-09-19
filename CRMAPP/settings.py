@@ -10,20 +10,17 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 from pathlib import Path
-import environ
+import os
 
-# Initialize environ
-env = environ.Env()
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Read the .env file
-environ.Env.read_env()
+SECRET_KEY = 'django-insecure-f09u@kny6*@nlh+ivketx$==6m63m7u)1k$y5h#-_8ah@5#sb@'
 
-# Now you can access environment variables, including SECRET_KEY
-DEBUG = env('DEBUG')
-SECRET_KEY = env('SECRET_KEY')
+DEBUG = True
+SECRET_KEY = 'django-insecure-f09u@kny6*@nlh+ivketx$==6m63m7u)1k$y5h#-_8ah@5#sb@'
 
 # The rest of your settings
-BASE_DIR = Path(__file__).resolve().parent.parent
+
 ALLOWED_HOSTS = ['*']
 
 
